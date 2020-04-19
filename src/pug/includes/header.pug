@@ -1,0 +1,115 @@
+// Loading animation before site loading
+div(id="ip-container" class="ip-container")
+    header(class="ip-header")
+        .container
+            h1.ip-logo
+                img(src="img/logo.png")
+            .ip-loader
+                svg.ip-inner(width='60px' height='60px' viewbox='0 0 80 80')
+                    path.ip-loader-circlebg(d='M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z')
+                    path#ip-loader-circle.ip-loader-circle(d='M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z')
+            
+
+// Start Mobile Design for a navigation and search bar
+.vmagzine-mobile-search-wrapper
+    .search-form-container
+        span.bg-overlay
+        span.close.icon
+        form
+            input(type="search")
+.vmagzine-mobile-navigation-wrapper
+    .navigation-container
+        span.bg-overlay
+        .social-media
+            each iconClass in ['icon instagram', 'icon facebook', 'icon google-plus', 'icon tumblr', 'icon linkedin']
+                a(href="#" class="" + iconClass)
+        .burger.toggle
+            each num in [1,2,3]
+                div(class="line" + num)
+
+           
+        .vmagazine-lite-logo
+            img(src='img/footer-logo.png')                
+        nav.navbar-custom
+            ul.nav-list-container
+                li.dropdown
+                    a.dropdown-toggle(href='#' data-value='home' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") home
+                    .dropdown-menu(aria-labelledby="navbarDropdown")
+                        a.dropdown-item(href="#") Home one
+                        a.dropdown-item(href="#") Home Two
+                        a.dropdown-item(href="#") Home Three
+                        a.dropdown-item(href="#") Home four
+
+                li        
+                    a(href="#").nav-item blogs
+                li      
+                    a(href="#").nav-item lifestyles
+                li       
+                    a(href="#").nav-item photography 
+                li.dropdown
+                    a.dropdown-toggle( href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") catgeories
+                    .dropdown-menu(aria-labelledby="navbarDropdown")
+                        a.dropdown-item(href="#") Travel
+                        a.dropdown-item(href="#") Photography
+                        a.dropdown-item(href="#") Food
+                
+                li
+                    a(href="#").nav-item News    
+.vmagazine-lite-mobile-nav-wrapp
+    nav.navbar-custom
+        .container
+            .navbar-search              
+                a(href="#" class="search search-close")
+            .branding-logo
+                a(href="#")
+                    img(src="img/footer-logo.png")        
+            .nav-toggle
+                .line1
+                .line2
+                .line3
+// End Mobile Design for a navigation and search bar
+
+// Start Top Header Bar
+section.top-header-bar
+    .container
+        .row
+            .col-md-4
+                ul.nav
+                    - var navValList = ['shop', 'travel', 'gaming']
+                        each list in navValList
+                            li.nav-item
+                                a(href="#").nav-link=list
+            .col-md-8
+                .social-search-sect
+                    .social-media
+                        include ./../mixins/social-media
+                        +socialMediaBlock(['icon instagram', 'icon facebook', 'icon google-plus', 'icon tumblr', 'icon linkedin'])  
+
+                    form(class='form-inline')
+                        input(class="form-control form-control-md" type="text" placeholder="Search ...")                       
+                        a(href="#")
+                            i(class="fas fa-search")
+// End Top Header Bar
+
+// Start Logo Section
+section.logo-sect
+    //- .container
+    //-     img(src='img/logo.png')
+// End Logo Section
+
+// Navbar
+include navbar
+
+// Start News Bar
+section.auto-news-bar
+    .container
+        .row
+            .col-md-2
+                h2 Recent News
+            .col-md-10
+                .owl-carousel.news-auto-slider-bar
+                    -for ( i=1; i <= 5 ; i++ )
+                        .slide
+                            a(href="#")
+                                p How to Pick the Most Comfortable, Spacious Seats on
+                            span.date December 20, 2018

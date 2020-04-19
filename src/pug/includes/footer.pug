@@ -1,0 +1,43 @@
+// Start Footer
+footer
+    .footer-main-info
+        .container
+            .row
+                .col-lg-4.col-md-6.col-sm-12
+                    a(href="#")
+                        img(src='img/footer-logo.png')
+                .col-lg-4.col-md-6.col-sm-12
+                    p Vmagazine-Lite is Powerful & Flexible WordPress theme for Newspaper , Magazine and Blog. It is crafted with great attention to details, incredible features, an intuitive user interface and everything else you need to create outstanding websites.
+                .col-lg-4.col-md-6.col-sm-12
+                    .social-media
+                        include ./../mixins/social-media
+                        +socialMediaBlock(['instagram', 'facebook', 'google-plus', 'tumblr', 'linkedin'])
+                
+
+                            
+    .footer-bar
+        .container
+            .row
+                .col-lg-6.col-md-12.m-auto
+                    p © 2018 | WordPress Theme : 
+                        a(href="#") VMagazine Lite
+                .col-lg-6.col-md-12
+                    ul.footer-menu-items
+                        each item in ['lifestyle', 'photography', 'news', 'travel', 'gaming', 'technology']
+                            li
+                                a(href="#")=item
+
+// End Footer
+
+// JS Files 
+script(type="text/javascript", src="js/jquery-3.4.1.js")
+script(type="text/javascript", src="js/popper.min.js")
+script(type="text/javascript", src="js/bootstrap.min.js")
+script(type="text/javascript", src="js/owl.carousel.min.js")
+script(type="text/javascript", src="js/custom.js")
+
+// For Sake of the animation
+script(type="text/javascript", src="js/animation/modernizr.custom.js")
+script(type="text/javascript", src="js/animation/classie.js")
+script(type="text/javascript", src="js/animation/pathLoader.js")
+script(type="text/javascript", src="js/animation/main.js")

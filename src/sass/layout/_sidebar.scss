@@ -1,0 +1,54 @@
+/* Start General sidebar */
+.search-sect{margin-bottom: 40px;
+@include media-breakpoint-down(md){
+  margin: 35px 0;
+  }
+}
+.recent-posts, .archives, .categories, .meta{
+  margin-bottom: 40px;
+  .list-group{
+    .list-group-item{
+      border:none;
+      padding: 1px 1.25rem;
+      font-family: monospace;
+      a{
+        border-bottom: 1px solid rgba(235,235,235,0.8);
+        display: block;
+        font-size: 0.825rem;
+        font-weight: 400;
+        color: rgba(24, 24, 24, 0.8);
+        padding:14px 0;
+        transition: all 0.3s linear;
+        line-height: 1.2;    
+      }
+      &:hover a{
+        color: #31bcaa;
+      }
+    }
+    .list-group-item:last-child{
+      a{border:none;}
+    }
+  }
+}
+
+/* .recent-comments*/
+.recent-comments{
+  margin-bottom: 40px;
+  font-family: monospace;
+  .list-group{
+    .list-group-item{
+      font-size: 0.92rem;
+      line-height: 1.2;
+      span{color: #30bcaa;}
+
+    a{
+      color: rgba(24, 24, 24, 0.8);transition:all .3s linear;
+    &:hover{color: #30bcaa;}
+      }
+
+    }
+
+  }
+}
+
+/******* End General sidebar ******/

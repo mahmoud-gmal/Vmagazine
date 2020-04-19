@@ -1,0 +1,27 @@
+// Start Navbar
+nav.navbar.navbar-expand-md.navbar-dark
+  .container
+    .navbar-brand
+        a(href="index.html")
+            i(class="fas fa-home")
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse.justify-content-between
+        ul.navbar-nav.p-0
+            li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(href='#' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") home
+                .dropdown-menu(aria-labelledby="navbarDropdown")
+                    each dropItem in ['home one', 'home two', 'home three', 'home four']
+                        a.dropdown-item(href="#")=dropItem
+            each navItem in ['blogs', 'lifestyles', 'photography']
+                li.nav-item
+                    a(href="" + navItem + '.html' class="nav-link")=navItem
+
+            li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(href='#' data-value='home' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") catgeories
+                .dropdown-menu(aria-labelledby="navbarDropdown")
+                    each dropItem2 in ['travel', 'Photography', 'Food']
+                        a.dropdown-item(href="#")=dropItem2
+            li.nav-item
+                a(href="news.html" class="nav-link") news
+// End Navbar

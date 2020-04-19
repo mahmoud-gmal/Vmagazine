@@ -1,0 +1,52 @@
+aside.sidebar
+    // Latest News
+    .latest-news
+        h2.special-heading Latest News
+        .articles
+            each val, index in ['How to Pick the Most Comfortable, Spacious Seats on', 'Revealed: Blair government ‘inexcusable’', 'Diet plan to loose your weight after workout within a month', 'Workout plan that will completely change your physique']
+                .article
+                    a(href="#")
+                        img( src="img/latest-news/" + index + '.jpg')   
+                    .article-description
+                        a(href="#")
+                            span.cats Entertainment
+                        a(href="#")
+                            h2.title=val
+    
+    // Ad Section
+    .Aad-sect
+        a(href="#")
+            img(src="img/1xx1.jpg")
+    
+    // social media sideBar
+    .social-media-sideBar
+        each img in ['facebook','twitter', 'instagram', 'linkedin', 'pinterest']
+            a(href="#")
+                img(src="img/social-media/" + img + '.png')
+
+    // video section
+    .vid-sect
+        h2.special-heading Video
+        iframe(width='100%' height='200' src='https://www.youtube.com/embed/uiuZm3KATII' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+    
+    // Tags Section
+    .tags-sect
+        h2.special-heading Tags
+        ul
+            each val in ['building', 'cricket', 'fashion', 'featured', 'lifestyle', 'shoes', 'sport', 'tips', 'top', 'trending']
+                li
+                    a(href="#")=val
+    
+    // Timeline Section
+    .timeline-sect
+        h2.special-heading Timeline
+        .posts-box
+            each num in [1,2]
+                .post-timeline
+                    .numPosts-date 
+                        span.num-posts 5
+                        p.date Apr 2018
+                    .post-content    
+                        a(href="#")
+                            p.post-title World Renown Speaker Zackery Stumped Ethic on
+                        span.comments  0

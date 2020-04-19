@@ -1,0 +1,95 @@
+// owl nav and owl dots styles in three sections "main slider, featured news, trending news"
+@mixin owlNavDotsWidth($calcBeforeWidth, $calcAfterWidth) {
+   
+    
+  /* Owl nav*/
+  .owl-nav {
+    float: right;
+    position: relative;
+    z-index: 99;
+    margin-top: 15px;
+
+    button.owl-prev,
+    button.owl-next {
+      background: #000;
+      color: #FFF;
+      display: inline-block;
+      margin-left: 7px;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      font-weight: 100;
+      -webkit-text-stroke: 1px #000;
+      transition: all 0.3s linear;
+
+      &:hover {
+        background-color: #30bcaa;
+        ;
+        -webkit-text-stroke: 1px #30bcaa;
+        ;
+      }
+    }
+  }
+
+  /* Owl Dots*/
+  .owl-dots {
+    position: relative;
+    height: 30px;
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+
+    button.owl-dot {
+      width: 10px;
+      height: 10px;
+      background: rgba(49, 188, 170, .3);
+      margin-left: 10px;
+      transition: all .3s linear;
+
+      &:hover {
+        background: #31bcaa;
+      }
+    }
+
+    button.owl-dot.active {
+      background: #31bcaa;
+    }
+
+    button.owl-dot:first-of-type {
+      &::before {
+        content: "";
+        width: calc(50% - #{$calcBeforeWidth});
+        height: 2px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(49, 188, 170, 0.15);
+
+        @include media-breakpoint-down(xs) {
+          content: none;
+        }
+      }
+    }
+
+    button.owl-dot:last-of-type {
+      &::after {
+        content: "";
+        width: calc(50% - #{$calcAfterWidth});
+        height: 2px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(49, 188, 170, 0.15);
+
+        @include media-breakpoint-down(xs) {
+          content: none;
+        }
+      }
+
+    }
+  }
+    
+}

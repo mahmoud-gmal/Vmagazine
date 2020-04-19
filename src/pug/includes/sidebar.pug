@@ -1,0 +1,59 @@
+.sidebar
+    // Search box
+    .search-sect
+        .input-group.form-2.pl-0
+            input(class="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search")
+            .input-group-append
+                span.input-group-text.lime.lighten-2
+                    i.fas.fa-search
+
+    // Recent Posts
+    .recent-posts
+        h2.special-heading Recent Posts
+        ul.list-group
+            each num in [1,2,3,4,5]
+                li.list-group-item
+                    a(href="#" class="icon-before angle-right") How to Pick the Most Comfortable, Spacious Seats on
+    
+    // Recent Comments
+    .recent-comments
+        h2.special-heading Recent Comments
+        ul.list-group
+            each num in [1,2,3,4,5]
+                li.list-group-item
+                    a.comment-author-link(href="#") Access 
+                    span  on    
+                    a(href="#") Revealed: Blair government’s ‘inexcusable’
+
+
+    // Archives
+    .archives
+        h2.special-heading Archives
+        ul.list-group
+            each val in ['December 2018', 'April 2018', 'February 2018']
+                li.list-group-item
+                    a(href="#" class="icon-before angle-right")=val
+    
+    // Categories
+    .categories
+        h2.special-heading Categories
+        ul.list-group
+            each val in ['Entertainment', 'Food', 'Fun', 'Gadgets', 'Gaming', 'Lifestyle', 'News', 'Photography', 'Science', 'Sports', 'Swimming', 'Technology', 'Travel', 'Workout', 'World']
+                li.list-group-item
+                    a(href="#" class="icon-before angle-right")=val
+
+    // Meta 
+    .meta 
+        h2.special-heading Meta
+        ul.list-group
+            li.list-group-item 
+                a(href="#"  class="icon-before angle-right") Log in 
+            li.list-group-item
+                a(href="#"  class="icon-before angle-right") Entries 
+                    abbr(title="Really Simple Syndication")  RSS
+            li.list-group-item
+                a(href="#"  class="icon-before angle-right") Comments 
+                    abbr(title="Really Simple Syndication")  RSS
+            li.list-group-item 
+                a(href="#"  class="icon-before angle-right") WordPress.org 
+

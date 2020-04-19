@@ -1,0 +1,61 @@
+﻿doctype
+html
+    - var title = 'Photography';
+    title=title + " – Newspaper"
+    include includes/head
+body
+    // Importing Header
+    include includes/header
+
+    // Start Photography page content
+    .body-bg-color-g
+        section.main
+            .container
+                // breadcrumb
+                nav(aria-label="breadcrumb" class="breadcrump-sect")
+                    h1.breadcrumb-header Photography
+                    ol.breadcrumb
+                        li.breadcrumb-item 
+                            a(href="#") home
+                        li(aria-current="page").breadcrumb-item
+                            a(href="#") Blogs 
+                        li(aria-current="page").breadcrumb-item.active
+                            a(href="#") Photography 
+                .row
+                    .col-lg-9.col-md-12
+                        .blogs-container                           
+                            .blogs-articles
+                                each val, index in {1:'How to Pick the Most Comfortable, Spacious Seats on', 2:'Revealed: Blair government ‘inexcusable’', 3:'Diet plan to loose your weight after workout within a month', 4:'Workout plan that will completely change your physique', 5:'Discover the ever-changing views of the iconic East African', 6:'People with Multiple Sclerosis Say Pain Disrupts Their Daily Lives', 7:'20 simple diets and fitness tips you should know', 8:'Top 10 diet plan that you should immediately follow', 9:'Revealed: Blair government’s ‘inexcusable’', 10:'World Renown Speaker Zackery Stumped Ethic on'}
+                                    .article
+                                        a(href="#")
+                                            img(src="img/blogs/blog-post-img-" + index + '.jpg')
+                                        .post-desc
+                                            .article-info
+                                                span.clock april 5,2018
+                                                span.comments 0
+                                            a(href="#")
+                                                h3.article-title=val
+                                            p.article-content
+                                                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis d   
+                                            button.read-more READ MORE
+                                nav(aria-label="Page navigation example" class="pagination-sect")
+                                ul.pagination
+
+                                    li.page-item.active 
+                                        a(class="page-link" href="#") 1
+                                    li.page-item  
+                                        a(class="page-link" href="#") 2
+                                    li.page-item  
+                                        a ...
+                                    li.page-item  
+                                        a(class="page-link angle-right" href="#") next
+
+                    .col-lg-3.col-md-12
+                        // sidebar
+                        include includes/sidebar
+
+    // End Photography page content
+
+
+    // Footer 
+    include includes/footer

@@ -1,0 +1,186 @@
+/************* Home sidebar ********/
+
+/* latest news */
+.latest-news{
+    margin-bottom: 25px;
+    .articles{
+      background: #FFF; padding: 13px; 
+    .article{
+      display: grid;
+      grid-template-columns: 44% 50%;
+      margin-bottom: 15px;
+      grid-column-gap: 10px;
+      border-bottom: 1px solid rgba(235,235,235,0.8);
+      padding-bottom: 15px;
+        
+      img{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        
+        @include media-breakpoint-between(lg, lg){
+          height: 110px;margin-bottom: 5px;
+          }
+
+        @include media-breakpoint-down(md){
+          height:auto;margin-bottom: 5px; width: 301px;
+          }
+
+      }
+      .article-description{
+        span.cats{
+          text-transform: capitalize;
+          font-weight: 400;
+          color: #888;
+          background: transparent;
+          font-size: 0.75rem;
+          display: block;
+          margin-bottom: 3px;
+          margin-top: -3px;
+          transition: all .3s linear;
+          &:hover{
+            color: #30bcaa;
+          }
+        }
+        h2.title{
+          font-size: 0.800rem;
+          line-height: 1.125rem;
+          font-weight: 600;
+          color: #252525;
+          transition: all .3s linear;
+          &:hover{
+            color: #30bcaa;
+          }
+        }
+        @include media-breakpoint-down(md){
+          width: 301px;
+        }
+      }
+    @include media-breakpoint-between(lg, lg){
+      grid-template-columns: unset;
+      }
+    @include media-breakpoint-down(md){
+      grid-template-columns: unset;
+      justify-content: center;border:0
+      }
+
+      @include media-breakpoint-down(xs){
+        .article-description, img{width: 262px;}
+      }
+    }
+    .article:last-of-type{border-bottom: none;}
+    @include media-breakpoint-down(md){
+      display: grid; grid-template-columns: auto auto;
+    }
+    @include media-breakpoint-down(sm){
+      grid-template-columns: unset;
+    }
+  }
+  }
+  
+  /* Ad Section*/
+  .Aad-sect{
+    margin-bottom: 25px;
+    a{display: block;
+    
+      img{width: 100%;}
+    }
+  }
+  
+  /* social media sideBar */
+  .social-media-sideBar{
+    display: flex; margin-bottom: 25px; justify-content: space-between;
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  }
+  
+  /* video section */
+  .vid-sect{margin-bottom: 25px;
+  @include media-breakpoint-down(md){
+    iframe{height: 450px;}
+    }
+  }
+  
+  /* Tags Section */
+  .tags-sect{
+    margin-bottom: 25px;
+    ul{
+      background: #FFF; list-style-type: none; padding: 17px 10px;
+      li{
+        display: inline-block;
+        transition: all .3s linear;
+        margin-right: 0.4rem; margin-bottom: 0.6rem;
+  
+        a{
+          font-size: 0.875rem !important;
+          color: rgba(24,24,24,0.8);
+          display: block;
+          padding: 6px 12px;
+          border: 1px solid rgba(235, 235, 235, 0.8);
+          transition:all .3s linear;
+        }
+        &:hover{
+          background: #31bcaa;color: #FFF;border-color: transparent;;
+        }
+        &:hover a{
+          color: #FFF;
+        }
+      }
+    }
+  }
+  
+  /* Timeline Section */
+  .timeline-sect{
+    .posts-box{
+      background: #FFF;
+      padding: 17px 10px;
+  
+      .post-timeline{
+        display: grid;grid-template-columns: 30% 70%;margin-bottom:10px;align-items: center;
+        .numPosts-date{
+          span.num-posts{
+            background: #31bcaa;
+            border-radius: 50%;
+            color: #FFF;
+            display: block;
+            text-align: center;
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            font-size: 1.25rem;
+            margin: 0 auto 5px;
+          }
+          p.date{
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: rgba(0,0,0,0.54);
+            text-align: center;
+          }
+          p.post-title{
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+            line-height: 1.1rem;
+            font-weight: 600;
+            color: #000;
+            
+          }
+        }
+        .post-content{
+          border: 1px solid #eee;
+          padding: 0.975rem 0.75rem;
+          border-radius: 2px;
+          p.post-title{
+            color: #000;transition: all .3s linear;padding-bottom:6px;
+            &:hover{
+              color: #30bcaa;
+            }
+          }
+  
+        }
+      }
+    }
+  }
+  
+  /**************** End  ***************/

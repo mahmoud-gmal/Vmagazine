@@ -1,0 +1,144 @@
+doctype
+html
+    title Zmagazine
+    include includes/head
+body
+    // Importing Header
+    include includes/header
+
+    // Start home page content
+    .body-bg-color-g
+        section.main
+            .container
+                .row
+                    .col-lg-9
+                        .home-main-side
+                            // Main News Slider
+                            .news-slide-diff-cats.owl-carousel
+                                -for (i = 1; i <= 5; i++)
+                                    .slide-catgory
+                                        .slider-item-wrapper
+                                            .column
+                                                .article-cat-main
+                                                    .article-bg-img
+                                                        a(href="#")
+                                                            img(src="img/Optimized-oscar-sutton-254861-unsplash-1-1.jpg")
+                                                    .article-caption
+                                                        .cat-name
+                                                            a(href="#")
+                                                                span Entertainment
+                                                            a(href='#')
+                                                                span Science
+                                                        .article-info
+                                                            span.clock.icon-before april 5,2018
+                                                            span.comments.icon-before 0
+                                                        a(href="#")
+                                                            h3.article-title We need to connect WiFi for make it work for Users    
+                                            .column
+                                                .mini-articles
+                                                    each imgSrc in ['111-300x200', 'imgx1-1-300x200', 'd7-1-300x200', 'imagx4-1-300x200']
+                                                        article
+                                                            .article-bg-img
+                                                                a(href="#")
+                                                                    img(src="img/" + imgSrc + '.jpg')
+                                                            .article-description    
+                                                                .article-info
+                                                                    span.clock.icon-before april 5,2018
+                                                                    span.comments.icon-before 0
+                                                                a(href="#")
+                                                                    h3.article-title We need to connect WiFi for make it work for Users  
+                                                
+                            // Featured News Slider
+                            section.featured-news
+                                h2.special-heading Featured News
+                                .featured-news-slider.owl-carousel
+                                    each artTitle2, index in ['20 simple diets and fitness tips you should know',' Top 10 diet plan that you should immediately follow','Diet plan to loose your weight after workout within a month','Workout plan that will completely change your physique','Discover the ever-changing views of the iconic East African','People with Multiple Sclerosis Say Pain Disrupts Their Daily...','20 simple diets and fitness tips you should know','Top 10 diet plan that you should immediately follow']
+                                        .slide
+                                            a(href="#")
+                                                img(src="img/features-news/" + index + '.jpg')
+                                            .article-info
+                                                span.clock.icon-before april 5,2018
+                                                span.comments.icon-before 0
+                                            a(href="#")
+                                                h3.article-title=artTitle2 
+                            
+                            // World News
+                            section.world-news
+                                h2.special-heading World
+                                .world-news-container
+                                    .main-article
+                                        .post-thumb
+                                            a(href="#" class="thumb-zoom")
+                                                img(src="img/Optimized-oscar-sutton-254861-unsplash-1-1.jpg")
+                                        .article-description
+                                            .article-info
+                                                span.clock.icon-before april 5,2018
+                                                span.comments 0
+                                            a(href="#")
+                                                h3.article-title How to Pick the Most Comfortable, Spacious Seats on
+                                            p.article-content
+                                                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. nteger tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulp                         
+                                    .mini-articles
+                                        .row
+                                            -for (n=1; n<=6; n++) 
+                                                .col-md-6
+                                                    .article
+                                                        a(href="#")
+                                                            img(src="img/111-321x257.jpg")
+                                                        .article-description
+                                                            .article-info
+                                                                span.clock.icon-before april 5,2018
+                                                                span.comments 0
+                                                            a(href="#")
+                                                                h3.article-title Revealed: Blair government ‘inexcusable’.
+                                            h2.view-all 
+                                                a(href="#") View All Posts
+                    .col-lg-3
+                        // Sidebar
+                        include includes/home-sidebar
+        // buy section
+        section.buying-sect
+            .container
+                a(href="#")
+                    img(src="img/2018-12-20.png")
+        
+        // categories section
+        section.categories
+            .container
+                .row
+                    each val, index in ['Technology', 'World', 'Health']
+                        .col-lg-4.col-md-6
+                            a(href="#")
+                                h2.special-heading=val
+                            .cats-box
+                                each catTitle in ['What to wear to work: Advice from 11 stylish Toronto women ', 'Woman Shares Transformation A Year After Taking Up Running', 'Meet The Couple Behind Instagram’s Hit Travelogue']
+                                    .cat
+                                        a(href="#")
+                                            img(src="img/cats/" + index + '.jfif')
+                                        .cat-content
+                                            a(href="#")
+                                                span.cat-name=val
+                                            h3.cat-title
+                                               a(href="#")=catTitle
+
+        // Start Trending News
+        section.trending-news
+            .container
+                h2.special-heading Trending News
+                .slider-bg-container
+                    .trending-news-slider.owl-carousel
+                        each artTitle, index in ['A Home So Uncluttered That It Almost Looks Empty','Maldives sculpture by British artist torn down for being thr...','Americans don’t think Trump got message from midterms','With its unique mix of cultures, languages','Magical sea dive of Northern California awaits you','Swiss village’s plan to avoid extinction? Become a hotel','‘Firewatch’ is Coming to Nintendo Switch ‘...', 'Google Home One-ups Echo, Now Lets You Call']
+                            .slide
+                                a(href="#")
+                                    img(src="img/trending-news/" + index + ".jfif")
+                                .article-info
+                                    span.clock april 5,2018
+                                    span.comments 0
+                                a(href="#")
+                                    h3.article-title=artTitle
+
+    // End home page content 
+
+
+    // Footer 
+    include includes/footer

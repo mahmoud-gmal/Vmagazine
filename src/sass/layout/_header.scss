@@ -1,0 +1,348 @@
+
+/* Start Top Header Bar */
+.top-header-bar{
+    background-color: #000;  padding: 8px 0;
+
+    .nav-item{
+      .nav-link{
+        @include media-breakpoint-between(sm, md) {
+          font-size: 16px; padding: 0.5rem .8rem;
+          }
+      }
+    }
+    .social-search-sect{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  
+      .social-media{
+          margin-right: 14px;
+        .icon{
+            margin-left: 17px;
+
+        }
+    }
+    form{
+      justify-content: end;
+      input{
+        border: none;color: #FFF;
+        margin-right: 14px;
+        background: no-repeat;
+        border-left: 1px solid #FFF;
+        border-radius: 0;
+  
+        &:focus{background: none; border-color: #FFF;color: #FFF;}
+        &::placeholder, &:placeholder-shown{color: #FFF; word-spacing: -1px;}
+      }
+        
+      }
+  
+    }
+    a{color: #FFF;transition: all .3s linear;
+      &:hover{
+        color: #31bcaa;
+      }
+
+    }
+
+    // responsive design
+    @include media-breakpoint-down(sm) { 
+      display: none;
+     }
+
+    
+     
+  }
+  /* End Top Header Bar */
+  
+  /* Start Logo Section */
+  .logo-sect{
+    padding:20px 0;min-height:116px;
+    img{max-width: 100%;height: auto;}
+    @include media-breakpoint-down(sm) { 
+      display: none;
+     }
+  }
+  /* End Logo Section */
+  
+  
+   /* Start Navbar */
+   .navbar{
+    background-color: #000;padding: 14px 0;
+  
+    .navbar-brand{
+      a{color: #FFF; transition: all .3s linear;
+        &:hover{color: #dd3333}
+        @include media-breakpoint-down(sm) { 
+          display: none;
+         }
+      }
+    }
+    .navbar-nav {
+      .nav-item{margin-right: 15px;font-weight: bold;text-transform: capitalize;}
+      .nav-link{transition: all .3s linear;color: #FFF;}
+      .nav-link:hover,
+     .nav-link:focus{color: #dd3333;}
+  
+    }
+  
+    .dropdown-menu{
+      padding: 0.5rem 1rem;
+      min-width: 13rem;margin-top: 13px;
+      a{
+        color: #000;
+        transition: all .3s linear;
+            
+  
+        &:hover{
+          padding-left: 2rem;;color: #31bcaa;background: none;
+        }
+      }
+    }
+  // Responsive design styles
+  @include media-breakpoint-down(sm) { 
+    display: none;
+   }
+  
+  }
+  /* End Navbar */
+  
+  
+  
+  
+  /* Start Custom Navbar for mobile design */
+  .navbar-custom {
+    width: 100%;
+    position: static;
+    top: 0;
+    z-index: 9999;
+  
+    background-color: #000;
+    font-family: "Poppins", sans-serif;
+    padding: 15px 0;
+    transition: top .3s; 
+  
+    .container{
+      display: flex;
+      align-items: center;
+  
+      .navbar-logo {
+        font-size: 20px;
+        a{
+          color: #FFF;
+          transition: all .3s linear;
+          &:hover{
+            color: #dd3333;
+          }
+        }
+      }
+      .nav-list-container{
+        display: flex;margin: 0;
+  
+          li{
+            margin-right: 30px;list-style-type: none;
+  
+              a{
+                color: #e2e2e2;
+                letter-spacing: 2px;
+                font-weight: 600;
+                font-size: 15px;
+                font-family: sans-serif;
+                transition: all .3s linear;
+  
+                &:hover{
+                  color: #dd3333;
+                }
+              }
+  
+              .dropdown-menu{
+                padding: 0.5rem 1rem;
+                min-width: 13rem;margin-top: 17px;
+                a{
+                  color: #000;
+                  transition: all .3s linear;
+                      
+  
+                  &:hover{
+                    padding-left: 2rem;;color: #31bcaa;background: none;
+                  }
+                }
+              }
+          }
+      }
+      @include media-breakpoint-down(sm) {
+      max-width: 100%;
+      }
+    }
+    .branding-logo{
+      margin-left: auto;
+      img{    width: 150px;
+        max-width: 100%;}
+    }
+
+  }
+  
+  
+  .burger {
+    display: none;
+  
+    div {
+      width: 25px;
+      height: 3px;
+      background-color: rgb(226, 226, 226);
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+  }
+  .nav-toggle {
+    display: none;
+  
+    div {
+      width: 25px;
+      height: 3px;
+      background-color: rgb(226, 226, 226);
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden; position: relative;
+    }
+  
+  
+    .burger {
+      display: block;margin-left: auto;
+      cursor: pointer;
+    }
+  
+    .nav-toggle {
+      display: block;margin-left: auto;
+      cursor: pointer;
+    }
+  }
+  
+  
+  .toggle {
+    .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .line2 {
+      opacity: 0;
+    }
+  
+    .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+  /* End Custom Navbar */
+
+  /*** Start Mobile Design for a navigation and search bar ***/
+.vmagzine-mobile-search-wrapper,
+.vmagzine-mobile-navigation-wrapper,
+.vmagazine-lite-mobile-nav-wrapp{ display: none;}
+
+.vmagazine-lite-mobile-nav-wrapp{
+  @include media-breakpoint-down(sm){
+    display: block;
+  }
+}
+.vmagzine-mobile-navigation-wrapper {
+  .navigation-container{
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+
+      span.bg-overlay{
+        background: #000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 99;
+      }
+      .social-media{
+        display: inline-block;
+        margin: 15px 0 0 15px;
+
+        a.icon{
+          color: #FFF;
+          margin-left: 26px;
+          font-size: 21px;
+        }
+      }
+      .burger {
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+      }
+
+      .vmagazine-lite-logo{
+        margin: 37px 0 17px;
+        text-align: center;
+
+        img{
+          max-width: 100%;height: auto;
+        }
+      }
+      .navbar-custom{
+        padding: 0;
+        .nav-list-container {
+          display: flex;
+          margin: 0px;
+          flex-direction: column;
+  
+          li{
+            list-style-type: none;
+            margin: 0 0 15px 0;
+  
+            a{
+              color: #e2e2e2;
+              letter-spacing: 2px;
+              font-weight: 600;
+              font-size: 18px;
+              font-family: sans-serif;
+              transition: all 0.3s linear;
+              &:hover{
+                color: #dd3333;
+              }
+            }
+          }
+          li.dropdown{
+            z-index: 9999;
+            .dropdown-menu{
+              min-width: 13rem;
+              a{
+                color: #000;font-size: 16px;
+                transition: all .3s linear;
+                &:hover{
+                  color: #dd3333;margin-left: 5px;background: none;
+                }
+              }
+            }
+            .dropdown-toggle::after{
+              float: right;
+              margin-right: 30px;
+              margin-top: 6px
+            }
+          }
+
+      }
+      } 
+
+    *{
+      z-index: 999;position: relative;
+    }
+  }
+}
+
+
+
+/*** End Mobile Design for a navigation and search bar ***/
