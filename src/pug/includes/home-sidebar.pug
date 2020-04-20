@@ -4,7 +4,7 @@ aside.sidebar
         h2.special-heading Latest News
         .articles
             each val, index in ['How to Pick the Most Comfortable, Spacious Seats on', 'Revealed: Blair government ‘inexcusable’', 'Diet plan to loose your weight after workout within a month', 'Workout plan that will completely change your physique']
-                .article
+                .article(data-aos-duration="1300" data-aos-offset="20" data-aos="fade-up")
                     a(href="#")
                         img( src="img/latest-news/" + index + '.jpg')   
                     .article-description
@@ -14,18 +14,18 @@ aside.sidebar
                             h2.title=val
     
     // Ad Section
-    .Aad-sect
+    .Aad-sect(data-aos-duration="1500" data-aos="fade-down")
         a(href="#")
             img(src="img/1xx1.jpg")
     
     // social media sideBar
-    .social-media-sideBar
+    .social-media-sideBar(data-aos-duration="1600" data-aos="fade-up")
         each img in ['facebook','twitter', 'instagram', 'linkedin', 'pinterest']
             a(href="#")
                 img(src="img/social-media/" + img + '.png')
 
     // video section
-    .vid-sect
+    .vid-sect(data-aos-duration="1400" data-aos="fade-up")
         h2.special-heading Video
         iframe(width='100%' height='200' src='https://www.youtube.com/embed/uiuZm3KATII' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
     
@@ -34,7 +34,7 @@ aside.sidebar
         h2.special-heading Tags
         ul
             each val in ['building', 'cricket', 'fashion', 'featured', 'lifestyle', 'shoes', 'sport', 'tips', 'top', 'trending']
-                li
+                li(data-aos-duration="1300" data-aos="fade-up")
                     a(href="#")=val
     
     // Timeline Section
@@ -43,10 +43,10 @@ aside.sidebar
         .posts-box
             each num in [1,2]
                 .post-timeline
-                    .numPosts-date 
+                    .numPosts-date(data-aos-duration="1200" data-aos-offset ="80" data-aos="fade-right")
                         span.num-posts 5
                         p.date Apr 2018
-                    .post-content    
+                    .post-content(data-aos-duration="1300" data-aos-offset ="80" data-aos="fade-left")   
                         a(href="#")
                             p.post-title World Renown Speaker Zackery Stumped Ethic on
                         span.comments  0

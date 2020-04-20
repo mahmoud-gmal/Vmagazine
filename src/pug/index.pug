@@ -49,7 +49,7 @@ body
                                                                     h3.article-title We need to connect WiFi for make it work for Users  
                                                 
                             // Featured News Slider
-                            section.featured-news
+                            section(class ="featured-news" data-aos-offset ="0" data-aos-duration ="1400" data-aos ="fade-right")
                                 h2.special-heading Featured News
                                 .featured-news-slider.owl-carousel
                                     each artTitle2, index in ['20 simple diets and fitness tips you should know',' Top 10 diet plan that you should immediately follow','Diet plan to loose your weight after workout within a month','Workout plan that will completely change your physique','Discover the ever-changing views of the iconic East African','People with Multiple Sclerosis Say Pain Disrupts Their Daily...','20 simple diets and fitness tips you should know','Top 10 diet plan that you should immediately follow']
@@ -66,7 +66,7 @@ body
                             section.world-news
                                 h2.special-heading World
                                 .world-news-container
-                                    .main-article
+                                    .main-article(data-aos-duration="1400" data-aos="fade-down")
                                         .post-thumb
                                             a(href="#" class="thumb-zoom")
                                                 img(src="img/Optimized-oscar-sutton-254861-unsplash-1-1.jpg")
@@ -79,7 +79,7 @@ body
                                                 h3.article-title How to Pick the Most Comfortable, Spacious Seats on
                                             p.article-content
                                                 | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. nteger tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulp                         
-                                    .mini-articles
+                                    .mini-articles(data-aos-duration="1500" data-aos="fade-up")
                                         .row
                                             -for (n=1; n<=6; n++) 
                                                 .col-md-6
@@ -102,7 +102,7 @@ body
         // buy section
         section.buying-sect
             .container
-                a(href="#")
+                a(href="#" data-aos-duration="1600" data-aos="fade-left")
                     img(src="img/2018-12-20.png")
         
         // categories section
@@ -115,7 +115,7 @@ body
                                 h2.special-heading=val
                             .cats-box
                                 each catTitle in ['What to wear to work: Advice from 11 stylish Toronto women ', 'Woman Shares Transformation A Year After Taking Up Running', 'Meet The Couple Behind Instagram’s Hit Travelogue']
-                                    .cat
+                                    .cat(data-aos-duration="1400" data-aos="fade-up")
                                         a(href="#")
                                             img(src="img/cats/" + index + '.jfif')
                                         .cat-content
@@ -131,7 +131,7 @@ body
                 .slider-bg-container
                     .trending-news-slider.owl-carousel
                         each artTitle, index in ['A Home So Uncluttered That It Almost Looks Empty','Maldives sculpture by British artist torn down for being thr...','Americans don’t think Trump got message from midterms','With its unique mix of cultures, languages','Magical sea dive of Northern California awaits you','Swiss village’s plan to avoid extinction? Become a hotel','‘Firewatch’ is Coming to Nintendo Switch ‘...', 'Google Home One-ups Echo, Now Lets You Call']
-                            .slide
+                            .slide(data-aos-duration="1400" data-aos="fade-left")
                                 a(href="#")
                                     img(src="img/trending-news/" + index + ".jfif")
                                 .article-info

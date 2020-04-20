@@ -2,6 +2,15 @@
 
 $(document).ready(function () {
 
+  // Trigger AOS Animations
+  AOS.init({
+    once: false,
+    easing: 'ease',
+    disable: 'mobile',
+    throttleDelay: 199
+  });
+
+
 // Start Custom Navbar
 // function navSlide() {
 //     const burger = document.querySelector(".burger");
@@ -73,21 +82,6 @@ function searchCustom(){
 }
 searchCustom();
 // End Custom Navbar  
-
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-//   var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     $(".navbar-custom").css({ top: '0'});
-//   } else {
-//     $(".navbar-custom").css({ top: '-60px', position: 'fixed' });
-//   }
-//   prevScrollpos = currentScrollPos;
-// };
-
-
-/* Animate css */
 
 
 
