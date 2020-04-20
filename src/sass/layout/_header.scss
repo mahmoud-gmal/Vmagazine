@@ -241,13 +241,17 @@
   /* End Custom Navbar */
 
   /*** Start Mobile Design for a navigation and search bar ***/
-.vmagzine-mobile-search-wrapper,
-.vmagzine-mobile-navigation-wrapper,
-.vmagazine-lite-mobile-nav-wrapp{ display: none;}
+.vmagzine-mobile-search-wrapper{ display: none;}
+.vmagazine-lite-mobile-nav-wrapp{
+  @include media-breakpoint-up(sm){
+    display: none;
+  }
+}
 
 .vmagazine-lite-mobile-nav-wrapp{
   @include media-breakpoint-down(sm){
     display: block;
+    
   }
 }
 .vmagzine-mobile-navigation-wrapper {

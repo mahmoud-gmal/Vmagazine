@@ -7,28 +7,8 @@
 //- Importing animation
 @import 'base/animation';
 
-
-body {
-    text-align: left;
-    font-weight: 400;
-    font-family: 'Lato', sans-serif;
-
-}
-
-.body-bg-color-g {
-    background-color: #ebebeb;
-    padding: 29px 0px;
-
-    @include media-breakpoint-between(sm, md){
-        padding: 4px 0;
-    }
-
-}
-
-
 //- Importing helpers
 @import 'helpers/helpers';
-
 
 //- Importing reset
 @import 'base/reset';
@@ -50,4 +30,5 @@ body {
 
 //- Importing Footer
 @import 'layout/footer';
+
 

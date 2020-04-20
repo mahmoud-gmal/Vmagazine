@@ -25,8 +25,10 @@ body
                             .blogs-articles
                                 each val, index in {1:'How to Pick the Most Comfortable, Spacious Seats on', 2:'Revealed: Blair government ‘inexcusable’', 3:'Diet plan to loose your weight after workout within a month', 4:'Workout plan that will completely change your physique', 5:'Discover the ever-changing views of the iconic East African', 6:'People with Multiple Sclerosis Say Pain Disrupts Their Daily Lives', 7:'20 simple diets and fitness tips you should know', 8:'Top 10 diet plan that you should immediately follow', 9:'Revealed: Blair government’s ‘inexcusable’', 10:'World Renown Speaker Zackery Stumped Ethic on'}
                                     .article
-                                        a(href="#")
-                                            img(src="img/blogs/blog-post-img-" + index + '.jpg')
+                                        .post-thumb
+                                            a(href="#" class="thumb-zoom")
+                                                img(src="img/blogs/blog-post-img-" + index + '.jpg')
+                                                .image-overlay
                                         .post-desc
                                             .article-info
                                                 span.clock april 5,2018

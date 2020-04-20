@@ -1,3 +1,50 @@
+/* Global classes and General styles*/
+
+body {
+  text-align: left;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.body-bg-color-g {
+  background-color: #ebebeb;
+  padding: 29px 0px;
+
+  @include media-breakpoint-between(sm, md){
+      padding: 4px 0;
+  }
+
+}
+
+.nav-hidden{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  -moz-transition: all 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  -o-transition: all 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  transition: all 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+.nav-show{
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: transform 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  -moz-transition: transform 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  -o-transition: transform 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  transition: transform 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
 .triangle-right{
     position: relative;
     &::after{

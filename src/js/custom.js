@@ -45,26 +45,23 @@ $(document).ready(function () {
 
 /* once clicked on nav-toggle it hide custom navbar in 'vmagazine-lite-mobile-nav-wrapp' and show custom navbar in 'vmagzine-mobile-navigation-wrapper' */
 
-function navSlide1() {
+const fullScreenNavToggle = () => {
 
-const navToggle = document.querySelector(".nav-toggle");
-const burger = document.querySelector(".burger");
-const vmMbNavWrap = document.querySelector(".vmagazine-lite-mobile-nav-wrapp");
-const vmMbNavWrapper = document.querySelector(".vmagzine-mobile-navigation-wrapper");
+const navToggle = $(".nav-toggle");
+const burger = $(".burger");
+const vmMbNavWrapper = $(".vmagzine-mobile-navigation-wrapper");
 
-navToggle.addEventListener("click", () => {
-  vmMbNavWrap.classList.add('d-none');
-  vmMbNavWrapper.classList.add('d-block');
+navToggle.bind("click", () => {
+  vmMbNavWrapper.addClass('nav-show');
 });
-burger.addEventListener("click", () => {
-  vmMbNavWrap.classList.remove('d-none');
-  vmMbNavWrapper.classList.remove('d-block');
 
+burger.bind("click", () => {
+  vmMbNavWrapper.removeClass('nav-show');
 });
 
 
 }
-navSlide1();
+fullScreenNavToggle();
 
 
 function searchCustom(){
@@ -205,3 +202,5 @@ $('.trending-news-slider').owlCarousel({
 
 
 })
+
+
