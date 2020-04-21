@@ -49,7 +49,7 @@ body
                                                                     h3.article-title We need to connect WiFi for make it work for Users  
                                                 
                             // Featured News Slider
-                            section(class ="featured-news" data-aos-offset ="0" data-aos-duration ="1400" data-aos ="fade-right")
+                            section(class ="featured-news" data-aos-duration ="1400" data-aos ="fade-right")
                                 h2.special-heading Featured News
                                 .featured-news-slider.owl-carousel
                                     each artTitle2, index in ['20 simple diets and fitness tips you should know',' Top 10 diet plan that you should immediately follow','Diet plan to loose your weight after workout within a month','Workout plan that will completely change your physique','Discover the ever-changing views of the iconic East African','People with Multiple Sclerosis Say Pain Disrupts Their Daily...','20 simple diets and fitness tips you should know','Top 10 diet plan that you should immediately follow']
@@ -115,7 +115,7 @@ body
                                 h2.special-heading=val
                             .cats-box
                                 each catTitle in ['What to wear to work: Advice from 11 stylish Toronto women ', 'Woman Shares Transformation A Year After Taking Up Running', 'Meet The Couple Behind Instagram’s Hit Travelogue']
-                                    .cat(data-aos-duration="1400" data-aos="fade-up")
+                                    .cat(data-aos-duration="1400" data-aos-offset="200" data-aos="fade-up")
                                         a(href="#")
                                             img(src="img/cats/" + index + '.jfif')
                                         .cat-content

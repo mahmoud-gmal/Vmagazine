@@ -110,7 +110,6 @@
       background: #FFF; list-style-type: none; padding: 17px 10px;
       li{
         display: inline-block;
-        transition: all .3s linear;
         margin-right: 0.4rem; margin-bottom: 0.6rem;
   
         a{
@@ -119,10 +118,11 @@
           display: block;
           padding: 6px 12px;
           border: 1px solid rgba(235, 235, 235, 0.8);
-          transition:all .3s linear;
+          transition:all .2s linear;
         }
         &:hover{
-          background: #31bcaa;color: #FFF;border-color: transparent;;
+          background: #31bcaa;color: #FFF;border-color: transparent;
+          
         }
         &:hover a{
           color: #FFF;

@@ -11,51 +11,8 @@ $(document).ready(function () {
   });
 
 
-// Start Custom Navbar
-// function navSlide() {
-//     const burger = document.querySelector(".burger");
-//     const nav = document.querySelector(".navbar-custom .nav-list-container");
-//     const navToggle = document.querySelector(".nav-toggle");
-//     const navLinks = document.querySelectorAll(".nav-list-container li");
-//     const vmMbNavWrap = document.querySelector(".vmagazine-lite-mobile-nav-wrapp");
-//     const vmMbNavWrapper = document.querySelector(".vmagzine-mobile-navigation-wrapper");
-    
-
-//     navToggle.addEventListener("click", () => {
-//       vmMbNavWrap.classList.add('d-none');
-//       vmMbNavWrapper.classList.add('d-block');
-//     });
-
-
-
-//     burger.addEventListener("click", () => {
-
-//       vmMbNavWrap.classList.remove('d-none');
-//       vmMbNavWrapper.classList.remove('d-block');
-
-//         //Toggle Nav
-//         nav.classList.toggle("nav-active");
-        
-//         //Animate Links
-//         navLinks.forEach((link, index) => {
-//             if (link.style.animation) {
-//                 link.style.animation = ""
-//             } else {
-//                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-//             }
-//         });
-//         //Burger Animation
-//         burger.classList.toggle("toggle");
-//     });
-    
-// }
-
-// navSlide();
-
-/* once clicked on nav-toggle it hide custom navbar in 'vmagazine-lite-mobile-nav-wrapp' and show custom navbar in 'vmagzine-mobile-navigation-wrapper' */
-
+// fullScreenNavToggle
 const fullScreenNavToggle = () => {
-
 const navToggle = $(".nav-toggle");
 const burger = $(".burger");
 const vmMbNavWrapper = $(".vmagzine-mobile-navigation-wrapper");
@@ -63,38 +20,20 @@ const vmMbNavWrapper = $(".vmagzine-mobile-navigation-wrapper");
 navToggle.bind("click", () => {
   vmMbNavWrapper.addClass('nav-show');
 });
-
 burger.bind("click", () => {
   vmMbNavWrapper.removeClass('nav-show');
 });
 
-
 }
 fullScreenNavToggle();
+// End fullScreenNavToggle  
 
-
-function searchCustom(){
-  const searchEl = document.querySelector(".navbar-search .search-close")
-  const vmMbsearchWrapper = document.querySelector(".vmagzine-mobile-search-wrapper")
-  searchEl.addEventListener("click", () => {
-    vmMbsearchWrapper.classList.add('d-block');
-  });
-}
-searchCustom();
-// End Custom Navbar  
-
-
-
-
-/* dropdown on hover */
+// dropdown on hover 
 $('.navbar ul li.dropdown').hover(function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
   }, function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
   });
-
-
-
 
 // Start News auto slider bar 
 $('.news-auto-slider-bar').owlCarousel({
@@ -105,12 +44,11 @@ $('.news-auto-slider-bar').owlCarousel({
     "<i class='fas fa-angle-right'></i>"],
     nav:true,
     dots:false,
-    autoplayTimeout:3000,
+    autoplayTimeout:2300,
     autoplay:true,
     autoplayHoverPause:true,
-    // animateOut: 'slideOutUp',
-    // animateIn: 'slideInUp',
-
+    animateOut: 'fadeOutUp',
+    animateIn: 'fadeInUp'
 
 });
 // End News auto slider bar 

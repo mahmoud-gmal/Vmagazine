@@ -1,34 +1,52 @@
+//================ Importing Vendeors ====================// 
+
+//- Importing fontAwesome
+@import 'vendors/fontAwesome/fontawesome.scss';
+
+//- Importing owl.carousel
+@import 'vendors/owl.carousel/owl.carousel';
+
 //- Importing bootstrap
 @import 'vendors/bootstrap/bootstrap';
+
+//================ Importing Helpers ====================// 
 
 //- Importing Mixins
 @import 'helpers/mixins';
 
-//- Importing animation
-@import 'base/animation';
-
 //- Importing helpers
 @import 'helpers/helpers';
+
+//================ Importing Base ====================// 
+
+//- Importing animation
+@import 'base/animation';
 
 //- Importing reset
 @import 'base/reset';
 
+//================ Importing Layout ====================// 
+
 //- Importing header
 @import 'layout/header';
 
-//- Importing home page 
-@import 'pages/home';
-
-//- Importing home sidebar
-@import 'layout/home-sidebar';
-
-//- Importing Blogs page
-@import 'pages/blog';
+//- Importing Footer
+@import 'layout/footer';
 
 //- Importing General sidebar
 @import 'layout/sidebar';
 
-//- Importing Footer
-@import 'layout/footer';
+//- Importing home sidebar
+@import 'layout/home-sidebar';
+
+//================ Importing Pages ====================//
+
+//- Importing home page 
+@import 'pages/home';
+
+//- Importing Blogs page
+@import 'pages/blog';
+
+
 
 
