@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   // Trigger AOS Animations
   AOS.init({
-    once: false,
+    once: true,
     easing: 'ease',
     disable: 'mobile',
     throttleDelay: 199
@@ -107,6 +107,7 @@ $('.news-auto-slider-bar').owlCarousel({
     dots:false,
     autoplayTimeout:3000,
     autoplay:true,
+    autoplayHoverPause:true,
     // animateOut: 'slideOutUp',
     // animateIn: 'slideInUp',
 
